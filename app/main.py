@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routers.api import router
-from database.session import engine
-from database.base_class import Base
+from app.routers.api import router
+from app.database.session import engine
+from app.database.base_class import Base
 
 #Create tables
 Base.metadata.create_all(bind=engine)

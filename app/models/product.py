@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float,Boolean,DateTime,func
 from sqlalchemy.orm import relationship
-from database.base_class import Base
+from app.database.base_class import Base
 
 class Product(Base):
   __tablename__ = 'products'

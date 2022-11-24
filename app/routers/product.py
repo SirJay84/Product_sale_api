@@ -4,9 +4,9 @@ from unittest import skip
 from fastapi import APIRouter,Depends,HTTPException
 from typing import Dict,List,Generator
 from sqlalchemy.orm import Session
-from database.session import SessionLocal
-from models.product import Product
-from schemas.product import ProductRead,ProductCreate,ProductPut,ProductInfo
+from app.database.session import SessionLocal
+from app.models.product import Product
+from app.schemas.product import ProductRead,ProductCreate,ProductPut,ProductInfo
 
 #Dependency Function
 def get_db() -> Generator:

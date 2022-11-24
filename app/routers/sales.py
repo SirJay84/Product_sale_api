@@ -1,9 +1,9 @@
 from fastapi import APIRouter,Depends,HTTPException
 from typing import Dict,List,Generator
 from sqlalchemy.orm import Session
-from database.session import SessionLocal
-from models.sales import Sales
-from schemas.sales import SalesCreate, SalesInfo,SalesPut,SalesRead
+from app.database.session import SessionLocal
+from app.models.sales import Sales
+from app.schemas.sales import SalesCreate, SalesInfo,SalesPut,SalesRead
 
 # Dependency Function:
 def get_db() -> Generator:
