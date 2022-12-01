@@ -1,16 +1,10 @@
-FROM python:3.9 
+FROM python:3.9
 
-WORKDIR /app 
+WORKDIR /app
 
-COPY . ./ 
-
-EXPOSE 8000
+COPY . /app
 
 RUN python3 -m pip install --upgrade pip
-RUN pip install fastapi SQLAlchemy
 RUN pip install -r requirements.txt
-RUN pip install uvicorn 
 
- 
-
-CMD ["uvicorn", "app.main:app","host=0.0.0.0","--reload"]
+CMD uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
