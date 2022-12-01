@@ -13,4 +13,4 @@ RUN pip install uvicorn
 
  
 
-CMD ["uvicorn", "app.main:app","161.35.150.185","--reload"]
+CMD ["uvicorn", "app.main:app","host=0.0.0.0","--reload"]
